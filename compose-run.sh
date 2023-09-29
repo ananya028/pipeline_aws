@@ -2,4 +2,4 @@
 
 cd /home/ubuntu
 
-docker-compose up 
+sudo docker-compose up 

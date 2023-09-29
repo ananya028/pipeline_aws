@@ -17,5 +17,6 @@ if ! [ -x "$(command -v docker)" ]; then
 
   echo "Docker installation complete."
 fi
+echo "already installed"
 
 exit 0
