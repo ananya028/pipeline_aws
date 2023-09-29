@@ -6,6 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - echo $AWS_DEFAULT_REGION
+      - env | grep AWS
       - echo $(aws ecr get-login --no-include-email --region ap-south-1)
       - $(aws ecr get-login --no-include-email --region $ap-south-1)
       - REPOSITORY_URI=405052395309.dkr.ecr.ap-south-1.amazonaws.com/sachin-rep
