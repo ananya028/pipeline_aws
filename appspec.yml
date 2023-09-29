@@ -6,7 +6,7 @@ files:
 hooks:
   AfterInstall:
     - location: compose-run.sh
-      timeout: 900
+      timeout: 9000
       runas: root
 
 
