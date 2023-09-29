@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: prod
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+    # networks:
+    #   - poc-intranet
+    env_file: .env.prod
+    ports:
+      - 5000:5000
+
+  mongodb:
+    image: mongo:6-jammy
+    restart: unless-stopped
+    volumes:
+      - ./scripts/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - poc-db-data:/data/db
+    # networks:
+    #   - poc-intranet
+    env_file: .env.prod
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT:-mongodb}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD:-mongodb}
+      MONGO_INITDB_ROOT_DATABASE: ${MONGO_ROOT_DB:-mongodb}
+    ports:
+      - 27017:27017
+
+
+volumes:
+  poc-db-data:
+
+# networks:
+#   poc-intranet:
