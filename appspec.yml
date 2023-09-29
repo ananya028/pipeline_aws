@@ -4,10 +4,6 @@ files:
   - source: /
     destination: /home/ubuntu
 hooks:
-  BeforeInstall:
-    - location: docker-install.sh
-      timeout: 800
-      runas: root
   AfterInstall:
     - location: compose-run.sh
       timeout: 900
