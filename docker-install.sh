@@ -9,7 +9,7 @@ if ! [ -x "$(command -v docker)" ]; then
   sudo apt-get install -y docker.io
   
   # Add the current user to the docker group to run Docker without sudo
-  sudo usermod -aG docker $USER
+  sudo usermod -aG docker ubuntu
 
   # Start the Docker service
   sudo systemctl start docker
