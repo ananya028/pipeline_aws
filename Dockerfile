@@ -30,7 +30,7 @@ COPY package.json \
   package-lock.json \
   ./
 
-EXPOSE 6000
+EXPOSE 5000
 EXPOSE 27017
 
 RUN npm install --only=production
