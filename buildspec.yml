@@ -7,12 +7,15 @@ phases:
   pre_build:
     commands:
       - echo "the prebuild phase begins"
-      - npm install
+     # - npm install
+      - npm install -g pnpm
+      - pnpm install
   build:
     commands:
       - echo "the build phase begins"
       - echo `pwd`
-      - npm run build
+     # - npm run build
+      - pnpm run build
       - echo `ls`
 
   post_build:
@@ -23,4 +26,3 @@ phases:
 artifacts:
   files:
     - build/**/*
-    
