@@ -15,6 +15,7 @@ phases:
       - echo "the build phase begins"
       - echo `pwd`
      # - npm run build
+      - VITE_APP_END_POINTS=${VITE_APP_END_POINTS}
       - pnpm run build
       - echo `ls`
 
