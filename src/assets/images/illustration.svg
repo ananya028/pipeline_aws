@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="EQ_PR_Illus" role="img" aria-labelledby="EQ_PR_Illus_Title" lang="en" viewBox="0 0 1500 1380">
+<title id="EQ_PR_Illus_Title">New Illustration Project</title>
+<style>
+  :root {
+    width: 100%;
+    background-color: transparent;
+    --ED_Illus-cls-1: #CECECE;
+  }
+  #EQ_PR_Illus path {
+    stroke-width: 23;
+    stroke-linecap: round;
+  }
+  .EQ_PR_Illus_fill1 {
+    fill: #fff;
+    stroke: #171717
+  }
+  .EQ_PR_Illus_fill2 {
+    fill: #171717
+  }
+  .EQ_PR_Illus_stroke {
+    stroke: #fff;
+  }
+  .EQ_PR_Illus_dash {
+    stroke: #171717;
+    stroke-dasharray: 1 45;
+    fill: none
+  }
+  .EQ_PR_Illus_dash2 {
+    stroke: #CECECE;
+    stroke-dasharray: 1 113;
+    fill: none
+  }
+  [data-theme=dark] {
+    --ED_Illus-cls-1: #999
+  }
+  [data-theme=dark] #EQ_Ill-BG {
+    fill: #cfcfcf
+  }
+  [data-theme=dark] #EQ_PR_Illus_gr_mskPaths {
+    filter: invert(1)
+  }
+  @media (forced-colors: active) {
+    #EQ_PR_Illus_CTO {
+      display: initial
+    }
+  }
+  @media (forced-colors: active) and (prefers-color-scheme: light) {
+    #EQ_PR_Illus_gr_mskPaths {
+      filter: invert(1)
+    }
+  }
+</style>
+<defs>
+  <mask id="EQ_PR_Illus_ref_msk">
+    <use href="#EQ_PR_Illus_gr_mskPaths" x="0" y="0" />
+  </mask>
+</defs>
+<g id="EQ_PR_Illus_gr_mskPaths">
+  <path id="EQ_Ill-BG" fill="#f7f7f7" d="M746 122q-152 95-299 134-212 60-287 109c-295 190-123 601 135 734 127 66 270 56 394 134 133 84 252 155 416 133 152-20 320-123 371-275 60-178-42-364-41-543 1-119 57-262 0-353Q1250-69 907 43q-80 28-161 79z"/>
+  <g class="EQ_PR_Illus_fill1">
+    <path d="M598 328h726q20 0 20 21v681q0 21-20 21H598q-20 0-20-21V349q0-21 20-21zM582 470h760M924 404h350" />
+    <path style="fill: var(--ED_Illus-cls-1)" d="M655 561h613v416H655z" />
+    <path d="M972 763a128 128 0 11-256 0 128 128 0 01256 0zm122 148h-57V635h57v276zm107 1h-58V697h58v215z"/>
+  </g>
+  <path class="EQ_PR_Illus_dash" d="M667 404h105M338 860v92h96" />
+  <path class="EQ_PR_Illus_stroke" d="M170 455h328q20 0 20 20v302q0 20-20 20H170q-20 0-20-20V475q0-20 20-20zM149 568h370M149 682h370M211 512h182M211 627h182M211 741h182"/>
+  <path class="EQ_PR_Illus_fill2" d="M526 952l-62-38v76zM843 766V640q128 0 128 126v0z"/>
+  <path class="EQ_PR_Illus_dash2" d="M457 512V745"/>
+</g>
+<g id="EQ_PR_Illus_CTO" display="none" role="none">
+  <rect x="0" y="0" width="100%" height="100%" fill="Canvas"/>
+  <rect x="0" y="0" width="100%" height="100%" fill="CanvasText" mask="url(#EQ_PR_Illus_ref_msk)" />
+</g>
+</svg>

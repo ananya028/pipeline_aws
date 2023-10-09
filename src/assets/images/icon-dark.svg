@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="EQ_PR_Icon" role="img" aria-labelledby="EQ_PR_Icon_Title" lang="en" viewBox="0 0 1015 674">
+<title id="EQ_PR_Icon_Title">New Icon Project</title>
+<style>
+  :root {
+    width: 100%;
+    background-color: transparent
+  }
+  #EQ_PR_Icon_gr_mskPaths {
+    filter: invert(1)
+  }
+  @media (forced-colors: active) {
+    #EQ_PR_Icon_CTO {
+      display: initial
+    }
+    #EQ_PR_Icon_gr_mskPaths {
+      filter: invert(1)
+    }
+  }
+</style>
+<defs>
+  <mask id="EQ_PR_Icon_ref_msk">
+    <use href="#EQ_PR_Icon_gr_mskPaths" x="0" y="0" />
+  </mask>
+</defs>
+<g id="EQ_PR_Icon_gr_mskPaths">
+  <path fill="#fff" d="M967 20H48Q21 21 21 48v577q1 29 27 29h919q27 0 27-29V48q0-28-27-28h0z"/>
+  <path style="fill: none; stroke: #171717; stroke-width:40; " id="Folds" d="M967 20H48Q21 21 21 48v577q1 29 27 29h919q27 0 27-29V48q0-28-27-28h0zm21 10L526 499q-21 19-40 0L26 33m301 304L26 643m961 0L686 337"/>
+</g>
+<g id="EQ_PR_Icon_CTO" display="none" role="none">
+  <rect x="0" y="0" width="100%" height="100%" fill="Canvas"/>
+  <rect x="0" y="0" width="100%" height="100%" fill="CanvasText" mask="url(#EQ_PR_Icon_ref_msk)" />
+</g>
+</svg>

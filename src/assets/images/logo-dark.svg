@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="EQ_PR_Logo" role="img" aria-labelledby="EQ_PR_Logo_Title" lang="en" viewBox="0 0 1690 874">
+<title id="EQ_PR_Logo_Title">New Logo Project</title>
+<style>
+  :root {
+    width: 100%;
+    background-color: transparent
+  }
+  .EQ_PR_Logo_fill {
+    fill:#FFFFFF;
+    stroke: #171717;
+    stroke-width: 40px;
+    stroke-linejoin: round;
+    paint-order: stroke
+  }
+  @media (forced-colors: active) {
+    #EQ_PR_Logo_CTO {
+      display: initial
+    }
+    #EQ_PR_Logo_gr_mskPaths {
+      filter: invert(1)
+    }
+  }
+</style>
+<defs>
+  <mask id="EQ_PR_Logo_ref_msk">
+    <use href="#EQ_PR_Logo_gr_mskPaths" x="0" y="0" />
+  </mask>
+</defs>
+<g id="EQ_PR_Logo_gr_mskPaths" class="EQ_PR_Logo_fill">
+  <path stroke="none" d="M734 511v-70l-34 57h-23l-33-55v68h-48V357h43l50 82 49-82h43l1 154h-48Zm273-96c0 36-28 58-71 58h-22v38h-52V357h74c43 0 71 23 71 58Zm-53 0c0-11-7-18-21-18h-19v36h19c14 0 21-7 21-18Zm222 69h-58l-11 27h-53l68-154h51l68 154h-54l-11-27Zm-14-37-15-39-15 39h30Zm295-90v154h-43l-59-70v70h-51V357h43l59 70v-70h51Zm172 98v56h-52v-56l-59-98h55l32 53 32-53h50l-58 98Z"/>
+  <path d="M435 516a82 82 0 110-164 82 82 0 010 164Zm0-115a33 33 0 100 66 33 33 0 000-66Zm278-301c-8-14-25-19-40-13l-5 2-5-2a419 419 0 00-497 33c-3 2-5 6-5 10s1 8 4 11l57 57c5 5 14 5 19 0h1c105-86 257-93 369-16l10 7-38 37-7-4a255 255 0 00-318 32l76 77c49-47 126-56 185-17l9 7 124-123c3-3 4-7 4-11s-2-8-5-10a336 336 0 00-411-13l-7 5-37-37 9-7a389 389 0 01443-14l5 3v5c0 8 4 16 10 22 12 12 31 13 44 1l2-1 2-2c9-11 10-27 2-39ZM198 652c5-5 5-13 1-19l-1-1a310 310 0 01-16-368l7-10 38 37-5 7a255 255 0 0029 315l77-77c-45-49-52-123-14-180l7-10-123-124c-3-2-7-4-11-4s-8 2-10 5a336 336 0 00-13 411l5 7-37 37-7-9a389 389 0 01-14-443l3-4 5-1c8 0 16-3 22-9 12-12 13-32 1-45l-1-1-2-2c-11-10-27-11-39-3-14 8-19 26-12 40l2 5-3 5a418 418 0 0033 498c2 3 6 4 10 4s8-1 11-4l57-57Zm507 99c3-3 4-6 4-10 0-5-1-8-4-11l-57-57c-5-5-13-5-19-1l-1 1a310 310 0 01-369 16l-10-7 38-38 7 5a255 255 0 00342-58l-81-74c-45 67-136 85-203 40l-10-7-123 123c-3 3-5 7-5 11 1 4 2 8 6 10a336 336 0 00410 13l7-5 37 37-9 7a389 389 0 01-443 14l-4-3-1-5c0-8-3-16-9-22a33 33 0 00-45-1l-1 1-2 2c-9 11-11 27-3 39 9 14 26 19 41 12l4-2 5 3a418 418 0 00498-33Z"/>
+</g>
+<g id="EQ_PR_Logo_CTO" display="none" role="none">
+  <rect x="0" y="0" width="100%" height="100%" fill="Canvas"/>
+  <rect x="0" y="0" width="100%" height="100%" fill="CanvasText" mask="url(#EQ_PR_Logo_ref_msk)" />
+</g>
+</svg>

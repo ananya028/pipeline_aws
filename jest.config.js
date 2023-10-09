@@ -1,0 +1,26 @@
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'jest-environment-jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    '^@test-utils': '<rootDir>/test-utils/$1',
+    '^@constants(.*)$': '<rootDir>src/constants/$1',
+    '^@assets(.*)$': '<rootDir>src/assets/$1',
+    '^@components(.*)$': '<rootDir>src/components/$1',
+    '^@helpers(.*)$': '<rootDir>src/helpers/$1',
+    '^@contexts(.*)$': '<rootDir>src/contexts/$1',
+    '^@hooks(.*)$': '<rootDir>src/hooks/$1',
+    '^@services(.*)$': '<rootDir>src/services/$1',
+    '^@pages(.*)$': '<rootDir>src/pages/$1',
+    '^@layouts(.*)$': '<rootDir>src/layouts/$1',
+    '^@routes(.*)$': '<rootDir>src/routes/$1',
+    '^@types(.*)$': '<rootDir>src/types/$1',
+    '^@themes(.*)$': '<rootDir>src/themes/$1',
+    '^@utils(.*)$': '<rootDir>src/utils/$1',
+  },
+  transform: {
+    '^.+\\.ts?$': 'ts-jest',
+    '^.+\\.js$': 'babel-jest',
+    '.+\\.(css|svg|webp|styl|less|sass|scss|png|jpg|otf|ttf|woff|woff2)$': 'jest-transform-stub',
+  },
+};

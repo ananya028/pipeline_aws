@@ -1,0 +1,12 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" lang="en" aria-labelledby="#EQ_Insta_alt" class="InstagramIcon">
+  <title id="EQ_Insta_alt">Follow Equivalent on Instagram</title>
+  <defs>
+    <mask id="fbMsk">
+      <path d="M0 0h128v128H0z" fill="#fff"></path>
+      <circle r="13" cy="64" cx="64" fill="none" stroke-width="5" stroke="#000"></circle>
+      <circle r="4" cy="48" cx="80" fill="#000"></circle>
+      <path d="M77 94H51Q34 94 34 77V51q0-17 17-17H77q17 0 17 17v26q0 17-17 17ZM88 77V51q0-11-11-11H51q-11 0-11 11v26q0 11 11 11h26q11 0 11-11Z" fill="#000"></path>
+    </mask>
+  </defs>
+  <circle mask="url(#fbMsk)" r="63" cy="64" cx="64" fill="#ffffff" id="fb_icon_cir"></circle>
+</svg>

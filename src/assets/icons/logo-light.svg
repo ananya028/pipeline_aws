@@ -1,0 +1,43 @@
+<svg id="Eq_Logo" role="img" lang="en" aria-labelledby="#Eq_Logo_title" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 472">
+<title id="Eq_Logo_title">Equivalent SVG.</title>
+<style>
+  #Eq_Logo {
+    color-scheme: light ;
+    --eq-cto-toggle: 1;
+    --eq-cls-1: hsl(0, 0%, var(--eq-cls-1-lt));
+    --eq-cls-2: hsl(var(--eq-cls-2-hu), calc(100% * var(--eq-cto-toggle)), var(--eq-cls-2-lt));
+    --eq-cls-1-lt: 9%;
+    --eq-cls-2-hu: 210;
+    --eq-cls-2-lt: 40%;
+    width: 100%;
+    background: transparent;
+  }
+  @media (forced-colors: active) {
+    #Eq_Logo {
+      --eq-cto-toggle: 0;
+      --eq-cls-1-lt: 97%;
+    }
+    #Eq-CTO {
+      display: initial;
+    }
+  }
+  @media (forced-colors: active) and (prefers-color-scheme: dark) {
+    #Eq_Logo {
+      --eq-cls-2-lt: 70%;
+    }
+  }
+</style>
+<defs>
+  <mask id="Eq_mask_CTO">
+    <use id="Eq_ref_mask" href="#Eq_group_maskPaths" />
+  </mask>
+</defs>
+<g id="Eq_group_maskPaths" fill="var(--eq-cls-1, #f7f7f7)">
+  <path fill="var(--eq-cls-2, #06c)" d="M327 216H1V124H156V36Z"/>
+  <path d="M2915 182h65v-58h-65V67h-75v57h-39v58h39v112q1 93 97 93 39 0 62-17l-42-44q-42 9-42-33Zm-344-58h-72v259h75V255q0-70 62-70 52 0 52 61v137h75V235q1-114-107-114-53 0-85 34ZM2262 275c11 58 99 68 138 27l41 43q-38 42-107 42a1.07 1 0 01-10-266c84-2 146 66 133 154Zm126-44a1 .9 0 00-127 0h125Zm-319 152h75V1h-75Zm-53 0h-70v-32q-19 36-79 36-96 0-96-78c1-83 90-79 170-78 3-61-78-59-120-36l-41-43c79-55 236-44 236 84Zm-75-108c-29 0-97-9-97 30q0 31 42 31s42 4 55-35zm-260-151-74 176-71-176h-78l109 259h77l109-259ZM1422 1h-75V76h76Zm0 123h-75v258h75Zm-197 0v128c0 48-25 70-60 70s-52-19-52-63V124h-75V270q0 118 112 118 50 0 82-38v33h68V124Zm-230 0V471H920V355c-74 75-206 5-206-101 0-121 137-177 210-100v-30ZM922 254c0-45-29-73-66-73-89 0-89 144 0 144 37 0 66-27 66-71ZM480 275c11 58 99 67 138 27l40 43q-31 42-106 42A1.07 1 0 01533 122c93-1 155 65 142 153Zm126-44a1 .9 0 00-127 0ZM1 291H327v92H172v88Z"/>
+</g>
+<g id="Eq-CTO" display="none" role="none">
+  <path d="M0 0h3000v472H0Z" fill="Canvas" />
+  <path d="M0 0h3000v472H0Z" fill="canvasText" mask="url(#Eq_mask_CTO)" />
+</g>
+</svg>

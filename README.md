@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+# Equivalent Webapp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tech stacks
 
-## Available Scripts
+### Languages
 
-In the project directory, you can run:
+- HTML: is the standard markup language for Web pages. With HTML you can create your own Website.
+- CSS: is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.
+- JavaScript: is a scripting or programming language that allows you to implement complex features on web pages.
+- TypeScript: is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 
-### `npm start`
+### Frameworks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [React](https://react.dev/learn): is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
+- [Mantine](https://mantine.dev/): builds fully functional accessible web applications faster than ever – Mantine includes more than 100 customizable components and 50 hooks to cover you in any situation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Develop tools
 
-### `npm test`
+- [Vite](https://vitejs.dev/): is a build tool that aims to provide a faster and leaner development experience for modern web projects.
+- [Husky](https://typicode.github.io): improves your commits and more! You can use it to lint your commit messages, run tests, lint code, etc... when you commit or push. Husky supports all Git hooks.
+- [Commitlint](https://commitlint.js.org/): supports checking a commit convention. By supporting npm-installed configurations it makes sharing of commit conventions easy.
+- [Eslint](https://eslint.org/): statically analyzes code to quickly find problems. It is built into most text editors and developers can run ESLint as part of your continuous integration pipeline.
+- [Prettier](https://prettier.io/): removes all original styling\* and ensures that all outputted code conforms to a consistent style.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Testing
 
-### `npm run build`
+- [React Testing Library](https://testing-library.com/): Simple and complete testing utilities that encourage good testing practices
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Available command lines
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Command            | Action                                       |
+| :----------------- | :------------------------------------------- |
+| `pnpm install`     | Install dependencies                         |
+| `pnpm run dev`     | Start local dev server at `localhost:5173`   |
+| `pnpm run build`   | Build your production site to `./dist/`      |
+| `pnpm run preview` | Preview your build locally, before deploying |
+| `pnpm run test`    | Run unit test                                |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to customize theme
 
-### `npm run eject`
+### **Structure**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### **Provider**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- In terms of providing theme context, ColorSchemeProvider and MantineProvider are wrapped in ThemeProvider.tsx
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+<ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+  <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
+    {children}
+  </MantineProvider>
+</ColorSchemeProvider>
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- State `colorScheme` will receive two values 'dark' and 'light' (Data type: ColorScheme)
+- The method `toggleColorScheme` is available that allows user to switch theme
 
-## Learn More
+#### **Theme object**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Mantine theme is an object where your application's colors, fonts, spacing, border-radius and other design tokens are stored.
+- With simple approach, you can override theme object at `themes/index.ts`. The following sample illustrates the way to customize:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+{
+  colorScheme: 'light',
+  colors: {
+    // Add your color
+    deepBlue: ['#E9EDFC', '#C1CCF6', '#99ABF0' /* ... */],
+    // or replace default theme color
+    blue: ['#E9EDFC', '#C1CCF6', '#99ABF0' /* ... */],
+  },
 
-### Code Splitting
+  shadows: {
+    md: '1px 1px 3px rgba(0, 0, 0, .25)',
+    xl: '5px 5px 3px rgba(0, 0, 0, .25)',
+  },
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  headings: {
+    fontFamily: 'Roboto, sans-serif',
+    sizes: {
+      h1: { fontSize: '2rem' },
+    },
+  },
+}
+```
 
-### Analyzing the Bundle Size
+You can discover details at [https://mantine.dev/theming/theme-object/](https://mantine.dev/theming/theme-object/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### **Components**
 
-### Making a Progressive Web App
+- For each components, we need to add specific style for each variants, sizes,...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+{
+  ...
+  colorScheme: 'dark',
+  components: {
+    Button: {
+      variants: {
+        danger: (theme) => ({
+          root: {
+            backgroundColor: theme.colors.red[9],
+            color: theme.colors.red[0],
+            ...theme.fn.hover({ backgroundColor: theme.colors.red[8] }),
+          },
+        }),
+      }
+    }
+  }
+}
+```
 
-### Advanced Configuration
+#### **Dark theme**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- All Mantine components support dark color scheme natively without any additional steps.
+- The following sample demonstrates how we can customize dark theme:
 
-### Deployment
+```
+{
+  colorScheme: 'dark',
+  colors: {
+    // override dark colors to change them for all components
+    dark: [
+      '#d5d7e0',
+      '#acaebf',
+      '#8c8fa3',
+      '#666980',
+      '#4d4f66',
+      '#34354a',
+      '#2b2c3d',
+      '#1d1e30',
+      '#0c0d21',
+      '#01010a',
+    ],
+  },
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All places using theme.colors.dark[x] will be applied these changes.
+You can explore more at [https://mantine.dev/guides/dark-theme/](https://mantine.dev/guides/dark-theme/)

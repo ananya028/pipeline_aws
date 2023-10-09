@@ -1,0 +1,45 @@
+<svg id="favicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+<style>
+:root {
+  color-scheme: light dark;
+  --fav-cto-toggle: 1;
+  --fav-blue: hsl(210, calc(100% * var(--fav-cto-toggle)), 40%);
+  --fav-gray: #171717;
+  width: 100%;
+  background: transparent
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fav-blue: hsl(192, calc(100% * var(--fav-cto-toggle)), 50%);
+    --fav-gray: #ffffff;
+  }
+}
+@media (forced-colors:active) {
+  :root {
+    --fav-cto-toggle: 0;
+    --fav-cls-1-lt: 100%;
+  }
+  #fav-CTO {
+    display: initial
+  }
+}
+@media (forced-colors:active) and (prefers-color-scheme:dark) {
+  :root {
+    --fav-cls-2-lt: 70%;
+  }
+}
+</style>
+<defs>
+  <mask id="fav_mask_CTO">
+    <use id="fav_ref_mask" href="#fav_group_maskPaths" />
+  </mask>
+</defs>
+<g id="fav_group_maskPaths">
+  <polygon fill="var(--fav-blue)" points="290.63 0 290.63 131.25 75 131.25 75 243.75 534.38 243.75 290.63 0"/>
+  <polygon fill="var(--fav-gray)" points="309.37 600 309.37 468.75 525 468.75 525 356.25 65.62 356.25 309.37 600"/>
+</g>
+<g id="fav-CTO" display="none" role="none">
+  <path d="M0 0h600V600H0z" fill="Canvas" />
+  <path d="M0 0h600V600H0z" fill="canvasText" mask="url(#fav_mask_CTO)" />
+</g>
+</svg>
